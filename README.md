@@ -5,6 +5,7 @@
 A C++ template single-header file for constructing Max/MSP externals from C++ classes, in a friendly and readable manner. The core notion is that an instance of the external is encapsulated by an instance of the C++ class. Most of the mechanics of typical max objects are encapsulated by the curiously recurring template pattern.
 
 Updated and Tested (on Mac OSX) by Francesco Perticarari
+
 Copyright (c) 2017
 
 Updated and tested against Max 7 (2017). 
@@ -12,9 +13,9 @@ The previous version (base for this one) - which should be always credited - is 
 
 ## Using
 
-To develop Max/MSP projects, you will first need the Max SDK, available[on github](https://github.com/Cycling74/max-sdk))
+To develop Max/MSP projects, you will first need the Max SDK, available [on github](https://github.com/Cycling74/max-sdk))
 
-The source trunk includes headers, examples and Xcode project / Visual C++ project files (note: these have NOT BEEN ADAPTED! They are a legacy from MaxCpp6 and HAVE NOT BEEN MODIFIED SINCE NOR TESTED!!!). The XCode example projects should work 'out of the box' if the this repo is placed inside your MaxSDK folder (next to the source folder). 
+The source trunk includes headers, examples and Xcode project / Visual C++ project files (note: the Visual Studio files have NOT BEEN ADAPTED! They are a legacy from MaxCpp6 and HAVE NOT BEEN MODIFIED SINCE, NOR TESTED!!!). The XCode example projects should work 'out of the box' if the this repo is placed inside your MaxSDK folder (next to the source folder). 
 
 Since the source files will be C++, the ```main``` function needs to be qualified with ```extern "C"```.
 
