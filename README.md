@@ -4,9 +4,11 @@
 
 A C++ template single-header file for constructing Max/MSP externals from C++ classes, in a friendly and readable manner. The core notion is that an instance of the external is encapsulated by an instance of the C++ class. Most of the mechanics of typical max objects are encapsulated by the curiously recurring template pattern.
 
+Updated and Tested (on Mac OSX) by Francesco Perticarari
+Copyright (c) 2017
 
 Updated and tested against Max 7 (2017). 
-Previous version - the one to be credited and referenced - (including help) hosted on this [GitHub repo](https://github.com/grrrwaaa/maxcpp), 
+The previous version (base for this one) - which should be always credited - is hosted on this [GitHub repo](https://github.com/grrrwaaa/maxcpp), 
 
 ## Using
 
@@ -18,7 +20,9 @@ Since the source files will be C++, the ```main``` function needs to be qualifie
 
 Caveats: it almost surely won't work with virtuals or multiple inheritance. Also be careful not to include the header twice, or there'll be linker errors for duplicate m_class symbols.
 
-Thanks to Oli Larkin and Thijs Koerselman for feedback and contributions.
+Thanks to Graham Wakefield for his amazing work to create the original maxcpp6
+
+A basic version of a c++ project for a Max external, which is what this and the original maxcpp6 use for basis, is included in the Max 7 SDK (folder: max-sdk/source/advanced/collect)
 
 ## Sample code (Max object)
 
@@ -109,7 +113,7 @@ This version of maxcpp has been updated for Max 7 (and Max 7 sdk) by Francesco P
 
 The previous version (for Max 6 sdk), which this upgrade has barely changed, can be found [here](https://github.com/grrrwaaa/maxcpp)
 
-maxcpp is distributed under the permissive BSD-like MIT licence:
+maxcpp is distributed under its original open-source BSD-like MIT licence:
 
 Copyright (c) 2009-2013 Graham Wakefield
 
