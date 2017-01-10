@@ -17,6 +17,25 @@ To develop Max/MSP projects, you will first need the Max SDK, available [on gith
 
 The source trunk includes headers, examples and Xcode project / Visual C++ project files (note: the Visual Studio files have NOT BEEN ADAPTED! They are a legacy from MaxCpp6 and HAVE NOT BEEN MODIFIED SINCE, NOR TESTED!!!). The XCode example projects should work 'out of the box' if the this repo is placed inside your MaxSDK folder (next to the source folder). 
 
+## Setup
+
+1) Download the Max 7 SDK
+
+2) Download (or git clone) this repo into the SDK main folder ( at the same level of source )
+
+3) In the examples folder you will find a max, an msp and jbox external examples - they can be compiled an should work out-of-the-box
+
+4) In "MyExternals" you can craft your own externals. I left there, for illustration purposes, the beginning of an external that I started by copying the msp "example~" project folder into "MyExternals" and modyfing it.
+
+5) To give your external a unique name: rename the XCode project (if you do it externally make sure to re-define the compilation targets), change the name of the max class created in "main()" with a matching one, then rename the cpp file and -if you want- the wrapper class name.
+
+6) You can now work as you like: I usually extract main() into a different cpp file, associate headers files with this and the initial cpp, then start adding other cpp+header files, libraries, etc. 
+
+7) Note on libraries: if they are compiled, make sure their compilation architecture and compiler specifications match the one you are working with in this project (you can check them out in the "xcconfig" file or in the project settings in XCode)
+
+
+## Disclaimer
+
 Since the source files will be C++, the ```main``` function needs to be qualified with ```extern "C"```.
 
 Caveats: it almost surely won't work with virtuals or multiple inheritance. Also be careful not to include the header twice, or there'll be linker errors for duplicate m_class symbols.

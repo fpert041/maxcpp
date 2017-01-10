@@ -5,13 +5,13 @@
 class Example : public MspCpp<Example> {
 public:
 
-	Example(t_symbol * sym, long ac, t_atom * av) { 
+	Example(t_symbol * sym, long ac, t_atom * av) {
 		setupIO(2, 2); 
-		post("object created"); 
+		post("object created");
 	}
 	
-	~Example() { 
-		post("object freed"); 
+	~Example() {
+		post("object freed");
 	}	
 	
 	// methods:

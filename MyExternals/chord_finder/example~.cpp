@@ -1,8 +1,8 @@
-#include "maxcpp.h"
+#include "maxcpp6.h"
 
 // inherit from the MSP base class, template-specialized for myself:
 
-class Example : public MspCpp<Example> {
+class Example : public MspCpp6<Example> {
 public:
 
 	Example(t_symbol * sym, long ac, t_atom * av) { 
