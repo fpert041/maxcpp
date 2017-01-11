@@ -2,7 +2,7 @@
 
 // inherit from the MSP base class, template-specialized for myself:
 
-class Evolva : public MspCpp<Evolva> {
+class myExample : public MspCpp<myExample> {
 public:
 
 	myExample(t_symbol * sym, long ac, t_atom * av) {
@@ -49,7 +49,7 @@ public:
 
 C74_EXPORT int main(void) {
     // create a class with the given name:
-    myExample::makeMaxClass("evolva~");
+    myExample::makeMaxClass("myExample~");
     REGISTER_METHOD(myExample, bang);
     REGISTER_METHOD_GIMME(myExample, test);
 }
